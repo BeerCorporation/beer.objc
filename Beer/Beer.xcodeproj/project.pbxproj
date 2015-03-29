@@ -14,6 +14,10 @@
 		8E4864041AC8A6650012F5B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4864031AC8A6650012F5B9 /* Images.xcassets */; };
 		8E4864071AC8A6650012F5B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4864051AC8A6650012F5B9 /* LaunchScreen.xib */; };
 		8E4864131AC8A6650012F5B9 /* BeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4864121AC8A6650012F5B9 /* BeerTests.m */; };
+		8E4864201AC8B6030012F5B9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E48641F1AC8B6030012F5B9 /* User.m */; };
+		8E4864231AC8B6040012F5B9 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4864221AC8B6040012F5B9 /* Bar.m */; };
+		8E4864261AC8B6040012F5B9 /* Invitation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4864251AC8B6040012F5B9 /* Invitation.m */; };
+		8E4864311AC8B9B80012F5B9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4864301AC8B9B70012F5B9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,13 @@
 		8E48640C1AC8A6650012F5B9 /* BeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4864111AC8A6650012F5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4864121AC8A6650012F5B9 /* BeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerTests.m; sourceTree = "<group>"; };
+		8E48641E1AC8B6030012F5B9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8E48641F1AC8B6030012F5B9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		8E4864211AC8B6040012F5B9 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
+		8E4864221AC8B6040012F5B9 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
+		8E4864241AC8B6040012F5B9 /* Invitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invitation.h; sourceTree = "<group>"; };
+		8E4864251AC8B6040012F5B9 /* Invitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invitation.m; sourceTree = "<group>"; };
+		8E4864301AC8B9B70012F5B9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4864311AC8B9B80012F5B9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,7 @@
 		8E4863E71AC8A6640012F5B9 = {
 			isa = PBXGroup;
 			children = (
+				8E4864301AC8B9B70012F5B9 /* MapKit.framework */,
 				8E4863F21AC8A6640012F5B9 /* Beer */,
 				8E48640F1AC8A6650012F5B9 /* BeerTests */,
 				8E4863F11AC8A6640012F5B9 /* Products */,
@@ -84,7 +97,7 @@
 				8E4863F81AC8A6640012F5B9 /* AppDelegate.m */,
 				8E4864001AC8A6650012F5B9 /* Main.storyboard */,
 				8E48641C1AC8AE830012F5B9 /* Assets */,
-				8E4863FA1AC8A6650012F5B9 /* Beer.xcdatamodeld */,
+				8E48641D1AC8AF6F0012F5B9 /* Model */,
 				8E4863F31AC8A6640012F5B9 /* Supporting Files */,
 			);
 			path = Beer;
@@ -123,6 +136,20 @@
 				8E4864051AC8A6650012F5B9 /* LaunchScreen.xib */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		8E48641D1AC8AF6F0012F5B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E4863FA1AC8A6650012F5B9 /* Beer.xcdatamodeld */,
+				8E4864241AC8B6040012F5B9 /* Invitation.h */,
+				8E4864251AC8B6040012F5B9 /* Invitation.m */,
+				8E4864211AC8B6040012F5B9 /* Bar.h */,
+				8E4864221AC8B6040012F5B9 /* Bar.m */,
+				8E48641E1AC8B6030012F5B9 /* User.h */,
+				8E48641F1AC8B6030012F5B9 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4864261AC8B6040012F5B9 /* Invitation.m in Sources */,
+				8E4864201AC8B6030012F5B9 /* User.m in Sources */,
 				8E4863FC1AC8A6650012F5B9 /* Beer.xcdatamodeld in Sources */,
+				8E4864231AC8B6040012F5B9 /* Bar.m in Sources */,
 				8E4863F91AC8A6640012F5B9 /* AppDelegate.m in Sources */,
 				8E4863F61AC8A6640012F5B9 /* main.m in Sources */,
 			);
