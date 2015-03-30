@@ -17,6 +17,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self deleteUsers];
     [self createUsers];
     return YES;
 }
@@ -38,6 +39,13 @@
             [context save:nil];
         }];
     }];
+}
+
+- (void)deleteUsers {
+    UIManagedDocument *document = [BeerDocumentHandler sharedDocumentHandler].document;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[document.fileURL path]]) {
+        [[NSFileManager defaultManager] removeItemAtURL:document.fileURL error:nil];
+    }
 }
 
 @end
