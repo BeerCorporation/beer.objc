@@ -10,14 +10,14 @@
 #import "Bar.h"
 #import "User.h"
 
-static NSString *InvitationEntityName = @"Invitation";
-static NSString *InvitationStatusAttributeName = @"status";
-static NSString *InvitationSenderLocationAttributeName = @"senderLocation";
-static NSString *InvitationrecipientLocationAttributeName = @"recipientLocation";
-static NSString *InvitationSenderLocationLatitudeAttributeName = @"senderLocationLatitude";
-static NSString *InvitationSenderLocationLongitudeAttributeName = @"senderLocationLongitude";
-static NSString *InvitationrecipientLocationLatitudeAttributeName = @"recipientLocationLatitude";
-static NSString *InvitationrecipientLocationLongitudeAttributeName = @"recipientLocationLongitude";
+NSString * const InvitationEntityName = @"Invitation";
+NSString * const InvitationStatusAttributeName = @"status";
+NSString * const InvitationSenderLocationAttributeName = @"senderLocation";
+NSString * const InvitationrecipientLocationAttributeName = @"recipientLocation";
+NSString * const InvitationSenderLocationLatitudeAttributeName = @"senderLocationLatitude";
+NSString * const InvitationSenderLocationLongitudeAttributeName = @"senderLocationLongitude";
+NSString * const InvitationrecipientLocationLatitudeAttributeName = @"recipientLocationLatitude";
+NSString * const InvitationrecipientLocationLongitudeAttributeName = @"recipientLocationLongitude";
 
 
 @interface Invitation ()

@@ -9,10 +9,10 @@
 #import "User.h"
 
 
-static NSString *UserEntityName = @"User";
-static NSString *UserNameAttributeName = @"name";
-static NSString *UserSentInvitationsAttributeName = @"sentInvitations";
-static NSString *UserReceivedInvitationsAttributeName = @"receivedInvitations";
+NSString * const UserEntityName = @"User";
+NSString * const UserNameAttributeName = @"name";
+NSString * const UserSentInvitationsAttributeName = @"sentInvitations";
+NSString * const UserReceivedInvitationsAttributeName = @"receivedInvitations";
 
 
 @implementation User

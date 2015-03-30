@@ -10,10 +10,10 @@
 #import <CoreData/CoreData.h>
 
 
-static NSString *UserEntityName;
-static NSString *UserNameAttributeName;
-static NSString *UserSentInvitationsAttributeName;
-static NSString *UserReceivedInvitationsAttributeName;
+extern NSString * const UserEntityName;
+extern NSString * const UserNameAttributeName;
+extern NSString * const UserSentInvitationsAttributeName;
+extern NSString * const UserReceivedInvitationsAttributeName;
 
 
 @interface User : NSManagedObject

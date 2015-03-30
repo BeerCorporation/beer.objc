@@ -8,12 +8,12 @@
 
 #import "Bar.h"
 
-static NSString *BarEntityName = @"Bar";
-static NSString *BarNameAttributeName = @"name";
-static NSString *BarLocationAttributeName = @"location";
-static NSString *BarLatitudeAttributeName = @"latitude";
-static NSString *BarLongitudeAttributeName = @"longitude";
-static NSString *BarInvitationsAttributeName = @"invitations";
+NSString * const BarEntityName = @"Bar";
+NSString * const BarNameAttributeName = @"name";
+NSString * const BarLocationAttributeName = @"location";
+NSString * const BarLatitudeAttributeName = @"latitude";
+NSString * const BarLongitudeAttributeName = @"longitude";
+NSString * const BarInvitationsAttributeName = @"invitations";
 
 
 @interface Bar ()

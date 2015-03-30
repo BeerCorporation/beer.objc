@@ -10,10 +10,10 @@
 #import <CoreData/CoreData.h>
 #import <MapKit/MapKit.h>
 
-static NSString *BarEntityName;
-static NSString *BarNameAttributeName;
-static NSString *BarLocationAttributeName;
-static NSString *BarInvitationsAttributeName;
+extern NSString * const BarEntityName;
+extern NSString * const BarNameAttributeName;
+extern NSString * const BarLocationAttributeName;
+extern NSString * const BarInvitationsAttributeName;
 
 
 @interface Bar : NSManagedObject

@@ -12,15 +12,15 @@
 #import "User.h"
 
 
-static NSString *InvitationEntityName;
-static NSString *InvitationStatusAttributeName;
-static NSString *InvitationSenderLocationAttributeName;
-static NSString *InvitationRecipientLocationAttributeName;
-static NSString *InvitationDateCreatedAttributeName;
-static NSString *InvitationDateModifiedAttributeName;
-static NSString *InvitationSenderAttributeName;
-static NSString *InvitationRecipientAttributeName;
-static NSString *InvitationBarAttributeName;
+extern NSString * const InvitationEntityName;
+extern NSString * const InvitationStatusAttributeName;
+extern NSString * const InvitationSenderLocationAttributeName;
+extern NSString * const InvitationRecipientLocationAttributeName;
+extern NSString * const InvitationDateCreatedAttributeName;
+extern NSString * const InvitationDateModifiedAttributeName;
+extern NSString * const InvitationSenderAttributeName;
+extern NSString * const InvitationRecipientAttributeName;
+extern NSString * const InvitationBarAttributeName;
 
 
 @class Bar, User;
