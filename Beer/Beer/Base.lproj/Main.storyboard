@@ -4,16 +4,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Contact Table View Controller-->
+        <!--Invitations Table View Controller-->
         <scene sceneID="Aay-5a-QlP">
             <objects>
-                <tableViewController title="Contact Table View Controller" id="bSR-V2-zh4" sceneMemberID="viewController">
+                <tableViewController title="Invitations Table View Controller" id="bSR-V2-zh4" customClass="InvitationsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="JD3-Vn-KaV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="Omi-9S-ZTe" detailTextLabel="Kos-ij-jEv" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="gYW-0h-6hz">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="InvitationCellIdentifier" textLabel="Omi-9S-ZTe" detailTextLabel="Kos-ij-jEv" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="gYW-0h-6hz">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gYW-0h-6hz" id="a8k-xc-QWf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -33,7 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XKO-YS-ixi" kind="showDetail" id="0dg-Es-KQx"/>
+                                    <segue destination="XKO-YS-ixi" kind="show" id="0dg-Es-KQx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

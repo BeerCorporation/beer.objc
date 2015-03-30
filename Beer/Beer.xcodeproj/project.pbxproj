@@ -19,6 +19,7 @@
 		8E4864261AC8B6040012F5B9 /* Invitation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4864251AC8B6040012F5B9 /* Invitation.m */; };
 		8E4864311AC8B9B80012F5B9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4864301AC8B9B70012F5B9 /* MapKit.framework */; };
 		8E48643A1AC8CAB70012F5B9 /* BeerDocumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4864391AC8CAB70012F5B9 /* BeerDocumentHandler.m */; };
+		8E48643D1AC8D1300012F5B9 /* InvitationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E48643C1AC8D1300012F5B9 /* InvitationsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		8E4864301AC8B9B70012F5B9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8E4864381AC8CAB70012F5B9 /* BeerDocumentHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerDocumentHandler.h; sourceTree = "<group>"; };
 		8E4864391AC8CAB70012F5B9 /* BeerDocumentHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerDocumentHandler.m; sourceTree = "<group>"; };
+		8E48643B1AC8D1300012F5B9 /* InvitationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationsTableViewController.h; sourceTree = "<group>"; };
+		8E48643C1AC8D1300012F5B9 /* InvitationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +99,12 @@
 		8E4863F21AC8A6640012F5B9 /* Beer */ = {
 			isa = PBXGroup;
 			children = (
+				8E4864001AC8A6650012F5B9 /* Main.storyboard */,
 				8E4863F71AC8A6640012F5B9 /* AppDelegate.h */,
 				8E4863F81AC8A6640012F5B9 /* AppDelegate.m */,
 				8E4864381AC8CAB70012F5B9 /* BeerDocumentHandler.h */,
 				8E4864391AC8CAB70012F5B9 /* BeerDocumentHandler.m */,
-				8E4864001AC8A6650012F5B9 /* Main.storyboard */,
+				8E48643E1AC8D13D0012F5B9 /* Contacts */,
 				8E48641C1AC8AE830012F5B9 /* Assets */,
 				8E48641D1AC8AF6F0012F5B9 /* Model */,
 				8E4863F31AC8A6640012F5B9 /* Supporting Files */,
@@ -155,6 +159,15 @@
 				8E48641F1AC8B6030012F5B9 /* User.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8E48643E1AC8D13D0012F5B9 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				8E48643B1AC8D1300012F5B9 /* InvitationsTableViewController.h */,
+				8E48643C1AC8D1300012F5B9 /* InvitationsTableViewController.m */,
+			);
+			name = Contacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 			files = (
 				8E4864261AC8B6040012F5B9 /* Invitation.m in Sources */,
 				8E4864201AC8B6030012F5B9 /* User.m in Sources */,
+				8E48643D1AC8D1300012F5B9 /* InvitationsTableViewController.m in Sources */,
 				8E4863FC1AC8A6650012F5B9 /* Beer.xcdatamodeld in Sources */,
 				8E4864231AC8B6040012F5B9 /* Bar.m in Sources */,
 				8E4863F91AC8A6640012F5B9 /* AppDelegate.m in Sources */,
