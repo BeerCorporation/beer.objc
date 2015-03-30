@@ -13,11 +13,16 @@
 NSString * const InvitationEntityName = @"Invitation";
 NSString * const InvitationStatusAttributeName = @"status";
 NSString * const InvitationSenderLocationAttributeName = @"senderLocation";
-NSString * const InvitationrecipientLocationAttributeName = @"recipientLocation";
+NSString * const InvitationRecipientLocationAttributeName = @"recipientLocation";
 NSString * const InvitationSenderLocationLatitudeAttributeName = @"senderLocationLatitude";
 NSString * const InvitationSenderLocationLongitudeAttributeName = @"senderLocationLongitude";
-NSString * const InvitationrecipientLocationLatitudeAttributeName = @"recipientLocationLatitude";
-NSString * const InvitationrecipientLocationLongitudeAttributeName = @"recipientLocationLongitude";
+NSString * const InvitationRecipientLocationLatitudeAttributeName = @"recipientLocationLatitude";
+NSString * const InvitationRecipientLocationLongitudeAttributeName = @"recipientLocationLongitude";
+NSString * const InvitationDateCreatedAttributeName = @"dateCreated";
+NSString * const InvitationDateModifiedAttributeName = @"dateModified";
+NSString * const InvitationSenderAttributeName = @"sender";
+NSString * const InvitationRecipientAttributeName = @"recipient";
+NSString * const InvitationBarAttributeName = @"bar";
 
 
 @interface Invitation ()
@@ -76,34 +81,34 @@ NSString * const InvitationrecipientLocationLongitudeAttributeName = @"recipient
 }
 
 - (CLLocationCoordinate2D)recipientLocation {
-    [self willAccessValueForKey:InvitationrecipientLocationAttributeName];
+    [self willAccessValueForKey:InvitationRecipientLocationAttributeName];
 
-    [self willAccessValueForKey:InvitationrecipientLocationLatitudeAttributeName];
+    [self willAccessValueForKey:InvitationRecipientLocationLatitudeAttributeName];
     CLLocationDegrees latitude = self.recipientLocationLatitude.doubleValue;
-    [self didAccessValueForKey:InvitationrecipientLocationLatitudeAttributeName];
+    [self didAccessValueForKey:InvitationRecipientLocationLatitudeAttributeName];
 
-    [self willAccessValueForKey:InvitationrecipientLocationLongitudeAttributeName];
+    [self willAccessValueForKey:InvitationRecipientLocationLongitudeAttributeName];
     CLLocationDegrees longitude = self.recipientLocationLongitude.doubleValue;
-    [self didAccessValueForKey:InvitationrecipientLocationLongitudeAttributeName];
+    [self didAccessValueForKey:InvitationRecipientLocationLongitudeAttributeName];
 
     CLLocationCoordinate2D recipientLocation = CLLocationCoordinate2DMake(latitude, longitude);
-    [self didAccessValueForKey:InvitationrecipientLocationAttributeName];
+    [self didAccessValueForKey:InvitationRecipientLocationAttributeName];
 
     return recipientLocation;
 }
 
 - (void)setRecipientLocation:(CLLocationCoordinate2D)recipientLocation {
-    [self willChangeValueForKey:InvitationrecipientLocationAttributeName];
+    [self willChangeValueForKey:InvitationRecipientLocationAttributeName];
 
-    [self willChangeValueForKey:InvitationrecipientLocationLatitudeAttributeName];
+    [self willChangeValueForKey:InvitationRecipientLocationLatitudeAttributeName];
     self.recipientLocationLatitude = @(recipientLocation.latitude);
-    [self didChangeValueForKey:InvitationrecipientLocationLatitudeAttributeName];
+    [self didChangeValueForKey:InvitationRecipientLocationLatitudeAttributeName];
 
-    [self willChangeValueForKey:InvitationrecipientLocationLongitudeAttributeName];
+    [self willChangeValueForKey:InvitationRecipientLocationLongitudeAttributeName];
     self.recipientLocationLongitude = @(recipientLocation.longitude);
-    [self didChangeValueForKey:InvitationrecipientLocationLongitudeAttributeName];
+    [self didChangeValueForKey:InvitationRecipientLocationLongitudeAttributeName];
 
-    [self didChangeValueForKey:InvitationrecipientLocationAttributeName];
+    [self didChangeValueForKey:InvitationRecipientLocationAttributeName];
 }
 
 @end
