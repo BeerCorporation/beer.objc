@@ -14,7 +14,8 @@ typedef void (^OnDocumentReady) (UIManagedDocument *document);
 
 @interface BeerDocumentHandler : NSObject
 
-@property (strong, nonatomic) UIManagedDocument *document;
+@property (nonatomic, strong) UIManagedDocument *document;
+@property (nonatomic, readonly, getter=isOpening) BOOL opening;
 
 + (BeerDocumentHandler *)sharedDocumentHandler;
 - (void)performWithDocument:(OnDocumentReady)onDocumentReady;
