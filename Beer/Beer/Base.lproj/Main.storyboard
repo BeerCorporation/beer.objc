@@ -84,13 +84,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged as" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BK-tx-Zmb">
-                                                    <rect key="frame" x="99" y="8" width="493" height="17"/>
+                                                    <rect key="frame" x="99" y="19" width="493" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAs-MY-hLK">
-                                                    <rect key="frame" x="99" y="33" width="493" height="27"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAs-MY-hLK">
+                                                    <rect key="frame" x="99" y="36" width="493" height="27"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -104,8 +104,9 @@
                                                 <constraint firstItem="6BK-tx-Zmb" firstAttribute="leading" secondItem="fGs-JG-bgx" secondAttribute="trailing" constant="8" symbolic="YES" id="Nto-kE-UU1"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="fGs-JG-bgx" secondAttribute="bottom" id="RtH-tL-2cE"/>
                                                 <constraint firstItem="6BK-tx-Zmb" firstAttribute="trailing" secondItem="lT4-YQ-pj4" secondAttribute="trailingMargin" id="VeN-az-mxe"/>
-                                                <constraint firstItem="6BK-tx-Zmb" firstAttribute="top" secondItem="fGs-JG-bgx" secondAttribute="top" id="WCt-zs-f2X"/>
                                                 <constraint firstItem="zAs-MY-hLK" firstAttribute="leading" secondItem="fGs-JG-bgx" secondAttribute="trailing" constant="8" symbolic="YES" id="WX8-Zq-CtH"/>
+                                                <constraint firstItem="zAs-MY-hLK" firstAttribute="top" secondItem="6BK-tx-Zmb" secondAttribute="bottom" id="d7q-Aw-jFh"/>
+                                                <constraint firstAttribute="centerY" secondItem="zAs-MY-hLK" secondAttribute="centerY" id="kQb-8C-g3J"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">

@@ -8,7 +8,7 @@
 
 #import "Invitation.h"
 #import "Bar.h"
-#import "User.h"
+#import "Friend.h"
 
 NSString * const InvitationEntityName = @"Invitation";
 NSString * const InvitationStatusAttributeName = @"status";

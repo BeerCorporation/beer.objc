@@ -1,5 +1,5 @@
 //
-//  User.h
+//  Friend.f
 //  Beer
 //
 //  Created by Jean-Baptiste Bayle on 3/30/15.
@@ -16,7 +16,7 @@ extern NSString * const UserSentInvitationsAttributeName;
 extern NSString * const UserReceivedInvitationsAttributeName;
 
 
-@interface User : NSManagedObject
+@interface Friend : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
 
@@ -26,7 +26,7 @@ extern NSString * const UserReceivedInvitationsAttributeName;
 @end
 
 
-@interface User (CoreDataGeneratedAccessors)
+@interface Friend (CoreDataGeneratedAccessors)
 
 - (void)addSentInvitationsObject:(NSManagedObject *)value;
 - (void)removeSentInvitationsObject:(NSManagedObject *)value;

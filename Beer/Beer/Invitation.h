@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <MapKit/MapKit.h>
-#import "User.h"
+#import "Friend.h"
 
 
 extern NSString * const InvitationEntityName;
@@ -23,7 +23,7 @@ extern NSString * const InvitationRecipientAttributeName;
 extern NSString * const InvitationBarAttributeName;
 
 
-@class Bar, User;
+@class Bar, Friend;
 
 @interface Invitation : NSManagedObject
 
@@ -35,8 +35,8 @@ extern NSString * const InvitationBarAttributeName;
 @property (nonatomic, retain) NSDate * dateCreated;
 @property (nonatomic, retain) NSDate * dateModified;
 
-@property (nonatomic, retain) User *sender;
-@property (nonatomic, retain) User *recipient;
+@property (nonatomic, retain) Friend *sender;
+@property (nonatomic, retain) Friend *recipient;
 @property (nonatomic, retain) Bar *bar;
 
 @end

@@ -6,6 +6,11 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="invitations" toMany="YES" deletionRule="Nullify" destinationEntity="Invitation" inverseName="bar" inverseEntity="Invitation" syncable="YES"/>
     </entity>
+    <entity name="Friend" representedClassName="Friend" syncable="YES">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="receivedInvitations" toMany="YES" deletionRule="Nullify" destinationEntity="Invitation" inverseName="recipient" inverseEntity="Invitation" syncable="YES"/>
+        <relationship name="sentInvitations" toMany="YES" deletionRule="Nullify" destinationEntity="Invitation" inverseName="sender" inverseEntity="Invitation" syncable="YES"/>
+    </entity>
     <entity name="Invitation" representedClassName="Invitation" syncable="YES">
         <attribute name="dateCreated" attributeType="Date" syncable="YES"/>
         <attribute name="dateModified" attributeType="Date" syncable="YES"/>
@@ -15,17 +20,12 @@
         <attribute name="senderLocationLongitude" attributeType="Double" syncable="YES"/>
         <attribute name="status" attributeType="Integer 16" minValueString="0" maxValueString="2" defaultValueString="0" syncable="YES"/>
         <relationship name="bar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bar" inverseName="invitations" inverseEntity="Bar" syncable="YES"/>
-        <relationship name="recipient" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="receivedInvitations" inverseEntity="User" syncable="YES"/>
-        <relationship name="sender" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="sentInvitations" inverseEntity="User" syncable="YES"/>
-    </entity>
-    <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
-        <relationship name="receivedInvitations" toMany="YES" deletionRule="Nullify" destinationEntity="Invitation" inverseName="recipient" inverseEntity="Invitation" syncable="YES"/>
-        <relationship name="sentInvitations" toMany="YES" deletionRule="Nullify" destinationEntity="Invitation" inverseName="sender" inverseEntity="Invitation" syncable="YES"/>
+        <relationship name="recipient" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="receivedInvitations" inverseEntity="Friend" syncable="YES"/>
+        <relationship name="sender" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="sentInvitations" inverseEntity="Friend" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-4635" positionY="-1420" width="128" height="88"/>
-        <element name="Invitation" positionX="-4925" positionY="-1467" width="173" height="193"/>
-        <element name="Bar" positionX="-5166" positionY="-1467" width="128" height="103"/>
+        <element name="Bar" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Friend" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Invitation" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
