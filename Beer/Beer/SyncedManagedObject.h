@@ -16,7 +16,7 @@ extern NSString * const SyncedManagedObjectDateModifiedAttributeName;
 extern NSString * const SyncedManagedobjectDateDeletedAttributeName;
 
 
-typedef NS_ENUM(NSUInteger, SyncState) {
+typedef NS_ENUM(int16_t, SyncState) {
     SyncStateInSync,
     SyncStateInserted,
     SyncStateModified,

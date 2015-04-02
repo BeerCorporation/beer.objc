@@ -60,7 +60,32 @@ NSString * const InvitationCellIdentifier = @"InvitationCellIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:InvitationCellIdentifier forIndexPath:indexPath];
     Invitation *invitation = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = invitation.sender.name;
+    BeerDocumentHandler *documentHandler = [BeerDocumentHandler sharedDocumentHandler];
+
+    cell.textLabel.text = [documentHandler.currentUser isEqual:invitation.sender] ? invitation.recipient.name : invitation.sender.name;
+
+    cell.textLabel.font = [UIFont systemFontOfSize:cell.textLabel.font.pointSize];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:cell.detailTextLabel.font.pointSize];
+    switch ([invitation invitationAppearanceForCurrentUser:documentHandler.currentUser]) {
+        case InvitationAppearancePendingIncomingRequest:
+            cell.textLabel.font = [UIFont boldSystemFontOfSize:cell.textLabel.font.pointSize];
+            cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:cell.detailTextLabel.font.pointSize];
+            cell.detailTextLabel.text = @"Up for a beer?";
+            break;
+
+        case InvitationAppearanceAccepted:
+            cell.detailTextLabel.text = @"You're both thirsty! Let's have a beer!";
+            break;
+
+        case InvitationAppearanceWaitingForAnswer:
+            cell.detailTextLabel.text = @"Waiting for answer…";
+            break;
+
+        case InvitationAppearanceUnknown:
+        default:
+            cell.detailTextLabel.text = @"Network error, please refresh.";
+            break;
+    }
 
     return cell;
 }

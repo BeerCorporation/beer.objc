@@ -21,7 +21,7 @@ extern NSString * const FriendReceivedInvitationsAttributeName;
 @interface Friend : SyncedManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, getter=isCurrentUser) BOOL currentUser;
+@property (nonatomic, getter=isCurrentUser) NSNumber *currentUser;
 
 @property (nonatomic, retain) NSSet *sentInvitations;
 @property (nonatomic, retain) NSSet *receivedInvitations;

@@ -51,30 +51,20 @@ NSString * const InvitationBarAttributeName = @"bar";
             case InvitationStatusPending:
             case InvitationStatusDeclined:
                 return InvitationAppearanceWaitingForAnswer;
-                break;
 
             case InvitationStatusAccepted:
                 return InvitationAppearanceAccepted;
-                break;
-                
-            default:
-                return InvitationAppearanceUnknown;
-                break;
         }
     } else if ([currentUser isEqual:self.recipient]) {
         switch (self.status) {
             case InvitationStatusPending:
-                return InvitationAppearanceWaitingForAnswer;
-                break;
+                return InvitationAppearancePendingIncomingRequest;
 
             case InvitationStatusAccepted:
                 return InvitationAppearanceAccepted;
-                break;
 
             case InvitationStatusDeclined:
-            default:
                 return InvitationAppearanceUnknown;
-                break;
         }
     }
 

@@ -42,7 +42,7 @@
             // Create current user
             Friend *nanouk = [NSEntityDescription insertNewObjectForEntityForName:FriendEntityName inManagedObjectContext:context];
             nanouk.name = @"Nanouk";
-            nanouk.currentUser = YES;
+            nanouk.currentUser = @YES;
 
             // Create bars
             Bar *leMistral = [NSEntityDescription insertNewObjectForEntityForName:BarEntityName inManagedObjectContext:context];
@@ -76,7 +76,14 @@
             invitation4.sender = gepetto;
             invitation4.recipient = nanouk;
 
-            [context save:nil];
+            NSError *saveError = nil;
+            [context save:&saveError];
+            if (saveError) {
+                NSLog(@"Error: could not save data fixtures: '%@'.", saveError.localizedDescription);
+                return ;
+            } else {
+                [documentHandler fetchCurrentUserFromContext:context];
+            }
         }];
     }];
 }

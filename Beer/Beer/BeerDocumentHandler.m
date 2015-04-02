@@ -14,6 +14,7 @@ static NSTimeInterval BeerDocumentHandlerRetryDelay = .05;
 
 @interface BeerDocumentHandler ()
 
+@property (nonatomic, readwrite) Friend *currentUser;
 @property (nonatomic, readwrite) BOOL opening;
 
 @end
@@ -68,6 +69,23 @@ static BeerDocumentHandler *_sharedDocumentHandler;
     } else if (self.document.documentState == UIDocumentStateNormal) {
         OnDocumentDidLoad(YES);
     }
+}
+
+- (Friend *)fetchCurrentUserFromContext:(NSManagedObjectContext *)context {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:FriendEntityName];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"SELF.%@ == YES", FriendCurrentUserAttributeName];
+    fetchRequest.fetchLimit = 10;
+
+    NSError *fetchError = nil;
+    NSArray *results = [context executeFetchRequest:fetchRequest error:&fetchError];
+    if (fetchError || results.count != 1) {
+        NSLog(@"Error: impossible to fetch current user: '%@'.", fetchError.localizedDescription);
+        return nil;
+    }
+
+    Friend *currentUser = results.lastObject;
+    self.currentUser = currentUser;
+    return currentUser;
 }
 
 @end

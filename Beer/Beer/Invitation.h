@@ -13,14 +13,14 @@
 #import "Friend.h"
 
 
-typedef NS_ENUM(NSUInteger, InvitationStatus) {
+typedef NS_ENUM(int16_t, InvitationStatus) {
     InvitationStatusPending = 0,
     InvitationStatusDeclined,
     InvitationStatusAccepted
 };
 
-typedef NS_ENUM(NSUInteger, InvitationAppearance) {
-    InvitationAppearanceUnknown,
+typedef NS_ENUM(int16_t, InvitationAppearance) {
+    InvitationAppearanceUnknown = -1,
     InvitationAppearanceWaitingForAnswer,
     InvitationAppearancePendingIncomingRequest,
     InvitationAppearanceAccepted
@@ -40,7 +40,7 @@ extern NSString * const InvitationBarAttributeName;
 
 @interface Invitation : SyncedManagedObject
 
-@property (nonatomic) int status;
+@property (nonatomic) InvitationStatus status;
 
 @property (nonatomic) CLLocationCoordinate2D senderLocation;
 @property (nonatomic) CLLocationCoordinate2D recipientLocation;
