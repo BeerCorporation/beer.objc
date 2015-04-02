@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "SyncedManagedObject.h"
 
 
 extern NSString * const UserEntityName;
@@ -16,7 +17,7 @@ extern NSString * const UserSentInvitationsAttributeName;
 extern NSString * const UserReceivedInvitationsAttributeName;
 
 
-@interface Friend : NSManagedObject
+@interface Friend : SyncedManagedObject
 
 @property (nonatomic, retain) NSString * name;
 

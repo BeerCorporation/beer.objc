@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <MapKit/MapKit.h>
+#import "SyncedManagedObject.h"
 #import "Friend.h"
 
 
@@ -25,7 +26,7 @@ extern NSString * const InvitationBarAttributeName;
 
 @class Bar, Friend;
 
-@interface Invitation : NSManagedObject
+@interface Invitation : SyncedManagedObject
 
 @property (nonatomic, retain) NSNumber * status;
 

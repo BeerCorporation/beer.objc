@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E18E1701ACDB91B009E7D79 /* SyncedManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E18E16F1ACDB91B009E7D79 /* SyncedManagedObject.m */; };
 		8E4863F61AC8A6640012F5B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4863F51AC8A6640012F5B9 /* main.m */; };
 		8E4863F91AC8A6640012F5B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4863F81AC8A6640012F5B9 /* AppDelegate.m */; };
 		8E4863FC1AC8A6650012F5B9 /* Beer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E4863FA1AC8A6650012F5B9 /* Beer.xcdatamodeld */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E18E16E1ACDB91B009E7D79 /* SyncedManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncedManagedObject.h; sourceTree = "<group>"; };
+		8E18E16F1ACDB91B009E7D79 /* SyncedManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncedManagedObject.m; sourceTree = "<group>"; };
 		8E4863F01AC8A6640012F5B9 /* Beer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4863F41AC8A6640012F5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4863F51AC8A6640012F5B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				8E4863FA1AC8A6650012F5B9 /* Beer.xcdatamodeld */,
+				8E18E16E1ACDB91B009E7D79 /* SyncedManagedObject.h */,
+				8E18E16F1ACDB91B009E7D79 /* SyncedManagedObject.m */,
 				8E4864241AC8B6040012F5B9 /* Invitation.h */,
 				8E4864251AC8B6040012F5B9 /* Invitation.m */,
 				8E4864211AC8B6040012F5B9 /* Bar.h */,
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E18E1701ACDB91B009E7D79 /* SyncedManagedObject.m in Sources */,
 				8E4864261AC8B6040012F5B9 /* Invitation.m in Sources */,
 				8E4864201AC8B6030012F5B9 /* Friend.m in Sources */,
 				8E48643D1AC8D1300012F5B9 /* InvitationsTableViewController.m in Sources */,

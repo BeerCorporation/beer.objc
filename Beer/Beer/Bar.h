@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <MapKit/MapKit.h>
+#import "SyncedManagedObject.h"
 
 extern NSString * const BarEntityName;
 extern NSString * const BarNameAttributeName;
@@ -16,7 +17,7 @@ extern NSString * const BarLocationAttributeName;
 extern NSString * const BarInvitationsAttributeName;
 
 
-@interface Bar : NSManagedObject
+@interface Bar : SyncedManagedObject
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic) CLLocationCoordinate2D location;

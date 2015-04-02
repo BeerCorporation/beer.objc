@@ -70,7 +70,7 @@ NSString * const InvitationCellIdentifier = @"InvitationCellIdentifier";
 - (NSFetchRequest *)fetchRequest {
     if (!_fetchRequest) {
         _fetchRequest = [NSFetchRequest fetchRequestWithEntityName:InvitationEntityName];
-        _fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:InvitationDateModifiedAttributeName ascending:NO]];
+        _fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:SyncedManagedObjectDateModifiedAttributeName ascending:NO]];
     }
     return _fetchRequest;
 }
