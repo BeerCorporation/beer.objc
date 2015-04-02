@@ -31,9 +31,7 @@ NSString * const BarInvitationsAttributeName = @"invitations";
 @dynamic longitude;
 @dynamic invitations;
 
-+ (NSString *)managedObjectName {
-    return @"Bar";
-}
+#pragma mark - Convenience accessors for locations
 
 - (CLLocationCoordinate2D)location {
     [self willAccessValueForKey:BarLocationAttributeName];
