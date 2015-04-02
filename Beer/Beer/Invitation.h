@@ -13,12 +13,24 @@
 #import "Friend.h"
 
 
+typedef NS_ENUM(NSUInteger, InvitationStatus) {
+    InvitationStatusPending = 0,
+    InvitationStatusDeclined,
+    InvitationStatusAccepted
+};
+
+typedef NS_ENUM(NSUInteger, InvitationAppearance) {
+    InvitationAppearanceUnknown,
+    InvitationAppearanceWaitingForAnswer,
+    InvitationAppearancePendingIncomingRequest,
+    InvitationAppearanceAccepted
+};
+
+
 extern NSString * const InvitationEntityName;
 extern NSString * const InvitationStatusAttributeName;
 extern NSString * const InvitationSenderLocationAttributeName;
 extern NSString * const InvitationRecipientLocationAttributeName;
-extern NSString * const InvitationDateCreatedAttributeName;
-extern NSString * const InvitationDateModifiedAttributeName;
 extern NSString * const InvitationSenderAttributeName;
 extern NSString * const InvitationRecipientAttributeName;
 extern NSString * const InvitationBarAttributeName;
@@ -28,16 +40,15 @@ extern NSString * const InvitationBarAttributeName;
 
 @interface Invitation : SyncedManagedObject
 
-@property (nonatomic, retain) NSNumber * status;
+@property (nonatomic) int status;
 
 @property (nonatomic) CLLocationCoordinate2D senderLocation;
 @property (nonatomic) CLLocationCoordinate2D recipientLocation;
 
-@property (nonatomic, retain) NSDate * dateCreated;
-@property (nonatomic, retain) NSDate * dateModified;
-
 @property (nonatomic, retain) Friend *sender;
 @property (nonatomic, retain) Friend *recipient;
 @property (nonatomic, retain) Bar *bar;
+
+- (InvitationAppearance)invitationAppearanceForCurrentUser:(Friend *)currentUser;
 
 @end

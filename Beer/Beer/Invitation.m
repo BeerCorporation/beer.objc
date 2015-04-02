@@ -18,8 +18,6 @@ NSString * const InvitationSenderLocationLatitudeAttributeName = @"senderLocatio
 NSString * const InvitationSenderLocationLongitudeAttributeName = @"senderLocationLongitude";
 NSString * const InvitationRecipientLocationLatitudeAttributeName = @"recipientLocationLatitude";
 NSString * const InvitationRecipientLocationLongitudeAttributeName = @"recipientLocationLongitude";
-NSString * const InvitationDateCreatedAttributeName = @"dateCreated";
-NSString * const InvitationDateModifiedAttributeName = @"dateModified";
 NSString * const InvitationSenderAttributeName = @"sender";
 NSString * const InvitationRecipientAttributeName = @"recipient";
 NSString * const InvitationBarAttributeName = @"bar";
@@ -42,12 +40,48 @@ NSString * const InvitationBarAttributeName = @"bar";
 @dynamic recipientLocationLatitude;
 @dynamic senderLocationLongitude;
 @dynamic recipientLocationLongitude;
-@dynamic dateCreated;
-@dynamic dateModified;
 @dynamic sender;
 @dynamic recipient;
 @dynamic bar;
 
+
+- (InvitationAppearance)invitationAppearanceForCurrentUser:(Friend *)currentUser {
+    if ([currentUser isEqual:self.sender]) {
+        switch (self.status) {
+            case InvitationStatusPending:
+            case InvitationStatusDeclined:
+                return InvitationAppearanceWaitingForAnswer;
+                break;
+
+            case InvitationStatusAccepted:
+                return InvitationAppearanceAccepted;
+                break;
+                
+            default:
+                return InvitationAppearanceUnknown;
+                break;
+        }
+    } else if ([currentUser isEqual:self.recipient]) {
+        switch (self.status) {
+            case InvitationStatusPending:
+                return InvitationAppearanceWaitingForAnswer;
+                break;
+
+            case InvitationStatusAccepted:
+                return InvitationAppearanceAccepted;
+                break;
+
+            case InvitationStatusDeclined:
+            default:
+                return InvitationAppearanceUnknown;
+                break;
+        }
+    }
+
+    return InvitationAppearanceUnknown;
+}
+
+#pragma mark - Convenience accessors for locations
 
 - (CLLocationCoordinate2D)senderLocation {
     [self willAccessValueForKey:InvitationSenderLocationAttributeName];
