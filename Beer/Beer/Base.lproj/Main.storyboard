@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XKO-YS-ixi" kind="show" id="0dg-Es-KQx"/>
+                                    <segue destination="XKO-YS-ixi" kind="show" identifier="InvitationViewControllerSegueIdentifier" id="0dg-Es-KQx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -482,7 +482,7 @@
         <!--Invitation View Controller-->
         <scene sceneID="EM6-ex-dvF">
             <objects>
-                <viewController title="Invitation View Controller" id="XKO-YS-ixi" sceneMemberID="viewController">
+                <viewController title="Invitation View Controller" id="XKO-YS-ixi" customClass="InvitationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VOG-ST-KM7"/>
                         <viewControllerLayoutGuide type="bottom" id="IhU-Xz-f8z"/>
@@ -495,21 +495,39 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZX-BB-Ysz" userLabel="Details View">
-                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="457" width="600" height="143"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-Bp-0ge" userLabel="Invitation Status Label">
-                                        <rect key="frame" x="20" y="20" width="560" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-Bp-0ge" userLabel="Invitation Status Label">
+                                        <rect key="frame" x="20" y="76" width="560" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-sp-J3j">
+                                        <rect key="frame" x="270" y="8" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="39E-dS-cH7"/>
+                                            <constraint firstAttribute="height" constant="60" id="Qcv-Mw-LnK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation sent yesterday, 1:20 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fJ-8k-FyX">
+                                        <rect key="frame" x="8" y="118" width="584" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Ki0-Bp-0ge" firstAttribute="top" secondItem="dZX-BB-Ysz" secondAttribute="top" constant="20" symbolic="YES" id="9XF-Qe-vLc"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ki0-Bp-0ge" secondAttribute="bottom" constant="20" symbolic="YES" id="Dp7-vF-miP"/>
+                                    <constraint firstItem="Ki0-Bp-0ge" firstAttribute="top" secondItem="m9u-sp-J3j" secondAttribute="bottom" constant="8" symbolic="YES" id="41h-Et-ADD"/>
                                     <constraint firstItem="Ki0-Bp-0ge" firstAttribute="leading" secondItem="dZX-BB-Ysz" secondAttribute="leading" constant="20" symbolic="YES" id="LV8-Nt-9vx"/>
+                                    <constraint firstItem="0fJ-8k-FyX" firstAttribute="leading" secondItem="dZX-BB-Ysz" secondAttribute="leadingMargin" id="OCA-Dd-WfO"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="0fJ-8k-FyX" secondAttribute="trailing" id="OvU-GH-3w3"/>
+                                    <constraint firstItem="0fJ-8k-FyX" firstAttribute="bottom" secondItem="dZX-BB-Ysz" secondAttribute="bottomMargin" id="Q9U-54-8RV"/>
+                                    <constraint firstItem="0fJ-8k-FyX" firstAttribute="top" secondItem="Ki0-Bp-0ge" secondAttribute="bottom" constant="18" id="cwk-o9-5hR"/>
+                                    <constraint firstAttribute="centerX" secondItem="m9u-sp-J3j" secondAttribute="centerX" id="oVa-lf-EwJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ki0-Bp-0ge" secondAttribute="trailing" constant="20" symbolic="YES" id="shK-Sx-IUJ"/>
+                                    <constraint firstItem="m9u-sp-J3j" firstAttribute="top" secondItem="dZX-BB-Ysz" secondAttribute="topMargin" id="uEl-gy-CUf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -528,6 +546,12 @@
                         <barButtonItem key="backBarButtonItem" title="All Invitations" id="J0e-vh-2UG"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="0fJ-8k-FyX" id="ztZ-Kr-WdS"/>
+                        <outlet property="iconImageView" destination="m9u-sp-J3j" id="f4U-F7-vRf"/>
+                        <outlet property="mapView" destination="yNI-NZ-LTS" id="xo5-dI-cF6"/>
+                        <outlet property="statusLabel" destination="Ki0-Bp-0ge" id="sgG-2K-jJ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzd-2g-1FX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

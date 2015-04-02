@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Invitation.h"
 
 @interface InvitationViewController : UIViewController
+
+@property (nonatomic) Invitation *invitation;
 
 @end

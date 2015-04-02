@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		8E18E16E1ACDB91B009E7D79 /* SyncedManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncedManagedObject.h; sourceTree = "<group>"; };
 		8E18E16F1ACDB91B009E7D79 /* SyncedManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncedManagedObject.m; sourceTree = "<group>"; };
+		8E18E1711ACDE661009E7D79 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		8E4863F01AC8A6640012F5B9 /* Beer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4863F41AC8A6640012F5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4863F51AC8A6640012F5B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,10 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E4863E71AC8A6640012F5B9 = {
+		8E18E1721ACDE6E8009E7D79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8E4864301AC8B9B70012F5B9 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8E4863E71AC8A6640012F5B9 = {
+			isa = PBXGroup;
+			children = (
 				8E4863F21AC8A6640012F5B9 /* Beer */,
 				8E48640F1AC8A6650012F5B9 /* BeerTests */,
 				8E4863F11AC8A6640012F5B9 /* Products */,
@@ -106,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4864001AC8A6650012F5B9 /* Main.storyboard */,
+				8E18E1711ACDE661009E7D79 /* AppConstants.h */,
 				8E4863F71AC8A6640012F5B9 /* AppDelegate.h */,
 				8E4863F81AC8A6640012F5B9 /* AppDelegate.m */,
 				8E4864381AC8CAB70012F5B9 /* BeerDocumentHandler.h */,
@@ -114,6 +124,7 @@
 				8E48641C1AC8AE830012F5B9 /* Assets */,
 				8E48641D1AC8AF6F0012F5B9 /* Model */,
 				8E4863F31AC8A6640012F5B9 /* Supporting Files */,
+				8E18E1721ACDE6E8009E7D79 /* Frameworks */,
 			);
 			path = Beer;
 			sourceTree = "<group>";

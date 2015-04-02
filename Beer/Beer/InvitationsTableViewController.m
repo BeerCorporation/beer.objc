@@ -8,7 +8,9 @@
 
 #import "InvitationsTableViewController.h"
 #import <CoreData/CoreData.h>
+#import "AppConstants.h"
 #import "BeerDocumentHandler.h"
+#import "InvitationViewController.h"
 #import "Invitation.h"
 
 
@@ -102,6 +104,17 @@ NSString * const InvitationCellIdentifier = @"InvitationCellIdentifier";
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView reloadData];
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:InvitationViewControllerSegueIdentifier]) {
+        InvitationViewController *invitationVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Invitation *invitation = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        invitationVC.invitation = invitation;
+    }
 }
 
 @end
