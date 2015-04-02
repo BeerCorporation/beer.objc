@@ -9,15 +9,17 @@
 #import "Friend.h"
 
 
-NSString * const UserEntityName = @"Friend";
-NSString * const UserNameAttributeName = @"name";
-NSString * const UserSentInvitationsAttributeName = @"sentInvitations";
-NSString * const UserReceivedInvitationsAttributeName = @"receivedInvitations";
+NSString * const FriendEntityName = @"Friend";
+NSString * const FriendNameAttributeName = @"name";
+NSString * const FriendCurrentUserAttributeName = @"currentUser";
+NSString * const FriendSentInvitationsAttributeName = @"sentInvitations";
+NSString * const FriendReceivedInvitationsAttributeName = @"receivedInvitations";
 
 
 @implementation Friend
 
 @dynamic name;
+@dynamic currentUser;
 @dynamic sentInvitations;
 @dynamic receivedInvitations;
 

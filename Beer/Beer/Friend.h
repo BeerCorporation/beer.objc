@@ -11,15 +11,17 @@
 #import "SyncedManagedObject.h"
 
 
-extern NSString * const UserEntityName;
-extern NSString * const UserNameAttributeName;
-extern NSString * const UserSentInvitationsAttributeName;
-extern NSString * const UserReceivedInvitationsAttributeName;
+extern NSString * const FriendEntityName;
+extern NSString * const FriendNameAttributeName;
+extern NSString * const FriendCurrentUserAttributeName;
+extern NSString * const FriendSentInvitationsAttributeName;
+extern NSString * const FriendReceivedInvitationsAttributeName;
 
 
 @interface Friend : SyncedManagedObject
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, getter=isCurrentUser) BOOL currentUser;
 
 @property (nonatomic, retain) NSSet *sentInvitations;
 @property (nonatomic, retain) NSSet *receivedInvitations;
